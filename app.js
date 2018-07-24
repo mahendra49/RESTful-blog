@@ -51,7 +51,7 @@ app.get("/blogs/new", function(req, res) {
 // create route
 app.post("/blogs", function(req, res) {
 
-    //form data to js object
+    //removes scripts tags in html code if any
     req.body.blog.body = req.sanitize(req.body.blog.body);
 
     //create and redirect
